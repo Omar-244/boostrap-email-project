@@ -53,3 +53,8 @@ body {
 .email-display .email-body {
     margin-top: 10px;
 }
+.list-group-item-folder:hover {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    font-weight: bold;
+}
