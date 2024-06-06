@@ -8,44 +8,86 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="d-flex justify-content-between align-items-center bg-primary text-white">
+    <header class="d-flex justify-content-between align-items-center bg-primary text-white p-3">
         <div class="logo">Logo</div>
         <div class="search-bar flex-grow-1 mx-3">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Search"><!--form-control-->
         </div>
-        <button class="btn btn-light">Compose</button>
+        <!-- Compose Button with Modal Trigger -->
+        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#composeModal">Compose</button>
     </header>
+    
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-12 col-md-3 col-lg-2 bg-light">
+            <nav class="col-12 col-md-3 col-lg-2 bg-light p-3">
                 <ul class="list-group">
-                    <li class="list-group-item">Inbox</li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Inbox
+                        <span class="badge bg-primary rounded-pill">14</span><!--span badge-->
+                    </li>
                     <li class="list-group-item">Sent</li>
                     <li class="list-group-item">Drafts</li>
                     <li class="list-group-item">Trash</li>
                 </ul>
             </nav>
-            <main class="col-12 col-md-9 col-lg-4">
-                <div class="email-list">
-                    <div class="email-item">Email 1</div>
-                    <div class="email-item selected">Email 2 (selected)</div>
-                    <div class="email-item">Email 3</div>
-                </div>
+            <main class="col-12 col-md-9 col-lg-4 p-3">
+                <div class="email-list list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Email 1</a>
+                    <a href="#" class="list-group-item list-group-item-action active">Email 2 (selected)</a>
+                    <a href="#" class="list-group-item list-group-item-action">Email 3</a>
+                </div><!--list-group-item-action-"active"-->
             </main>
-            <aside class="col-12 col-lg-6">
-                <div class="email-display">
-                    <h2>Subject: Email 2</h2>
-                    <p>From: sender@example.com</p>
-                    <p>To: recipient@example.com</p>
-                    <div class="email-body">
-                        <p>This is the body of Email 2.</p>
+            <aside class="col-12 col-lg-6 p-3">
+                <div class="card"><!--card component-->
+                    <div class="card-header">
+                        <h2 class="h5 mb-0">Subject: Email 2</h2>
                     </div>
-                    <textarea class="form-control mt-3" rows="4" placeholder="Reply..."></textarea>
-                    <button class="btn btn-primary mt-2">Reply</button>
+                    <div class="card-body">
+                        <p><strong>From:</strong> sender@example.com</p>
+                        <p><strong>To:</strong> recipient@example.com</p>
+                        <div class="email-body">
+                            <p>This is the body of Email 2.</p>
+                        </div>
+                        <textarea class="form-control mt-3" rows="4" placeholder="Reply..."></textarea>
+                        <button class="btn btn-primary mt-2">Reply</button>
+                    </div>
                 </div>
             </aside>
         </div>
     </div>
+
+    <!-- Compose-->
+    <div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composeModalLabel">Compose Email</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-email" class="form-label">To</label>
+                            <input type="email" class="form-control" id="recipient-email" placeholder="recipient@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
