@@ -1,0 +1,12 @@
+5-29 : 
+8pm to 10pm:- Set up the initial project structure. Created wireframes for desktop, tablet, and mobile views.
+6-1: 
+8am to 12pm:- Built the HTML skeleton and added Bootstrap classes for layout. Implemented the header and sidebar sections.
+6-2: 
+4pm to 8pm:- Added the main content area with the email list and email display section. Ensured the layout is responsive using Bootstrap grid and media queries.
+6-3: 
+4am to 9am:-  Styled the components with custom CSS. Tested responsiveness on different screen sizes. Fixed layout issues.
+6-5: 
+5:30pm to 7:30pm:- Conducted code reviews with peers. Made necessary adjustments based on feedback.
+6-15: 
+2:00pm to 4:00pm Final testing and code cleanup. Pushed the final version to GitHub.
